@@ -1,0 +1,25 @@
+### POST register new user
+POST http://localhost:8081/register
+content-type: application/json
+
+{
+    "name": "ad",
+    "email": "ad@test.com",
+    "password": "yourpassword",
+    "isAdmin": false
+}
+
+
+### POST login user
+POST http://localhost:8081/login
+content-type: application/json
+
+{
+    "name": "admin2",
+    "password": "yourpassword"
+}
+
+
+### GET all users
+GET http://localhost:8081/getUsers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGI4ZjE3MjcwZjQwMWU5M2QyMjI3YyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc3MDk5MDc5NSwiZXhwIjoxNzcxMDc3MTk1fQ.z93X9utrtLL_oaZdfjcSuJNenLh1_GCPc8Deuh3QhVA 

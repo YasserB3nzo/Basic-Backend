@@ -10,9 +10,9 @@ const middleware = (req, res, next) => {
 
             const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-            req.user = decoded; 
+            req.user = decoded; // Attach the decoded user information to the request object
 
-            next();
+            next(); // move to the next route handler
         } catch (error) {
             res.status(401).json({ error: 'Not authorized, token failed' });
         }
@@ -21,4 +21,4 @@ const middleware = (req, res, next) => {
     }
 };
 
-module.exports = { middleware }; // Export the middleware function
+module.exports = { middleware };
